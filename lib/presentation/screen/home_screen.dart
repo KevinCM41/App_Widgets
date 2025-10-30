@@ -1,5 +1,6 @@
 import 'package:app_widgets/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: Text(menuItem.subtitle),
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () {
-              Navigator.pushNamed(context, menuItem.link);
+              context.push(menuItem.link);
             },
           );
         })
